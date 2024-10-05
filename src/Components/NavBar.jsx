@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import './Navbar.css';
+import './NavBar.css';
 import logo from "../assets/logo.jfif"
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility

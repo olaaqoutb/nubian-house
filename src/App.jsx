@@ -1,4 +1,3 @@
-// App.js
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/NavBar';
@@ -19,12 +18,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/reservation" element={<BookForm />} />
         <Route path="/more-details" element={<GuestHousePage />} />
-        {/* Render AboutUs without a route, so it shows on all pages */}
+        <Route path="/activity" element={<Activity />} />
+        <Route path="/customer" element={<Customer />} />
+        <Route path="/ourguesthouse" element={<OurGuestHouse />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-      <Activity />
-      <Customer />
-      <OurGuestHouse />
-      <AboutUs /> {/* Ensure AboutUs is rendered */}
       <Footer />
     </Router>
   );

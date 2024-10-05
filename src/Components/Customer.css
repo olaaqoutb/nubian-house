@@ -1,0 +1,107 @@
+.customerheader{
+    color: rgb(74, 165, 221)
+}
+.reviews-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* عرض أكبر ليتناسب مع 3 كاردات في الصف */
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 10%;
+}
+
+.reviews-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* منع التفاف العناصر */
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-card {
+    flex: 0 0 33.33%; /* عرض كل كارد ثلث العرض الإجمالي */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.review-image {
+    margin-bottom: 15px;
+}
+
+.review-image img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+.star {
+    color: RGB(255, 165, 0)
+    ;
+    font-size: 20px;
+}
+
+.review-content {
+    padding: 10px;
+}
+
+.reviewer-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 1em;
+    color: #555;
+}
+
+.prev-button,.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f5f5dc;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.next-button:hover{
+    background: RGB(255, 165, 0);
+    color: white;
+}
+.prev-button:hover{
+    background: RGB(255, 165, 0);
+color:white ;
+
+}
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+.reviews-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* منع التفاف العناصر */
+    transition: transform 1s ease-in-out; /* حركة سلسة */
+}
+@media (max-width:780px) {
+    .review-card {
+        flex: 0 0 50%; /* عرض كل كارد ثلث العرض الإجمالي */
+       
+    }
+  }
+  @media (max-width:500px) {
+    .review-card {
+        flex: 0 0 100%; /* عرض كل كارد ثلث العرض الإجمالي */
+       
+    }
+  }

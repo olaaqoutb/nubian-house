@@ -1,0 +1,70 @@
+/* Prevent horizontal overflow */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hides horizontal scrolling */
+  }
+  
+  .header {
+    font-size: 60px;
+    color: rgb(74, 165, 221)
+    ;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+  
+  .card1, .card2, .card3 {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 70%;
+    font-size: 20px;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
+  }
+  
+  .imgcard1, .imgcard2 {
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 20px;
+  }
+  
+  .descCard1 {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .card1, .card2, .card3 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .imgcard1, .imgcard2 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+      order: 1;
+    }
+  
+    .descCard1 {
+      width: 100%;
+      order: 2;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .header {
+      font-size: 40px;
+    }
+  }
+  

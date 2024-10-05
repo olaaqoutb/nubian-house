@@ -1,0 +1,188 @@
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* اجعل الارتفاع يملأ النافذة بالكامل */
+    overflow: hidden; /* يمنع ظهور التمرير */
+  
+
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+    object-fit: cover; /* تأكد من أن الصورة تغطي المساحة بالكامل دون التشويه */
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+    z-index: 1; /* Ensure it's behind text */
+  }
+
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: center;
+    color: rgb(255, 246, 246);
+    z-index: 2;
+    padding: 2rem;
+    border-radius: 10px;
+    opacity: 0; /* Ensure the text is hidden initially */
+    transition: opacity 1s ease-in-out; /* Optional: for smooth transition */
+}
+
+.title h1 {
+    font-size: 2.4vw; /* استخدم وحدات vw لجعل النص مرن */
+    margin: 0;
+}
+
+.title p {
+    font-size: 1.3vw; /* استخدم وحدات vw لجعل النص مرن */
+    margin: 10px 0 0;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2vw; /* استخدم وحدات vw لجعل النص مرن */
+    z-index: 3;
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+
+
+.booking-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.booking-container input,
+.booking-container select,
+.booking-container button {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.book-now-button {
+    background-color: #f5f5dc; 
+    color: #333; 
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    left: 65%;
+    top: 40%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.book-now-button:hover {
+    background-color:  RGB(255, 165, 0); 
+    color: white; 
+}
+
+
+
+
+
+
+
+
+
+
+/* .book-now-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+  
+  .book-now-button:hover::before {
+    transform: translateX(0);
+  }
+  
+  .book-now-button:hover{
+    color: #000;
+  }
+   */
+
+
+/* Responsive Design */
+
+@media (max-width: 1110px) {
+     .book-now-button {
+       
+        position: relative;
+        left: 35%;
+        top: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 4vw; /* تكبير النص للشاشات الصغيرة */
+    }
+
+    .title p {
+        font-size: 2vw; /* تكبير النص للشاشات الصغيرة */
+    }
+
+    .arrow-button {
+        font-size: 3.7vw; /* تكبير النص للشاشات الصغيرة */
+        padding: 0.5rem;
+    }
+    .title {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        width: 50%;
+    }
+    .book-now-button {
+      
+        position: relative;
+        left: 40%;
+        top: 55%;
+        padding: .7rem 1rem;
+    }
+}

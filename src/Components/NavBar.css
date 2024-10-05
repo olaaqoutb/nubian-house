@@ -1,0 +1,97 @@
+/* General styles */
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  margin-top: 5px;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: RGB(10, 170, 228)  ;
+  position: relative;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.burger {
+  display: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.menu-item:hover {
+  color: RGB(255, 165, 0)
+  ;
+}
+.logo{
+  width: 20%;
+}
+/* Responsive styles for smaller screens */
+@media (max-width: 915px) {
+  .menu-item {
+    font-size: 13px;
+    
+  }
+  .menu-item:hover {
+    color:rgb(80, 80, 203)
+    ;
+  }
+}
+
+@media (max-width: 740px) {
+  .menu {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color:rgb(218, 145, 8);
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 5;
+  }
+
+  .menu.show {
+    display: flex; /* Show menu when burger icon is clicked */
+  }
+
+  .menu-item {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .burger {
+    display: block; /* Show burger icon */
+  }
+  .logo{
+    width: 30%;
+  }
+}
